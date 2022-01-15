@@ -4,7 +4,7 @@
 
 ## Example Notebooks
 
-* [호텔 예약 취소에 숨겨진 인과적 이야기](example-notebooks/undefined.md)
+* [호텔 예약 취소에 숨겨진 인과적 이야기](example-notebooks/hotel-booking-cancel.md)
 * [IHDP 데이터셋에 DoWhy 적용하기](example-notebooks/ihdp-dowhy.md)
 * [사용자 정의 결과 함수를 사용해 추정치 반박하기](example-notebooks/undefined-1.md)
 * [멤버십 보상 프로그램의 효과 추정하기](example-notebooks/undefined-2.md)
