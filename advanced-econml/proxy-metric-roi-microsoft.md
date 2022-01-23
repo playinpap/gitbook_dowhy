@@ -48,7 +48,7 @@ DML을 통해 confounder의 영향에 의한 효과를 제거(통제)한 효과�
 outcome이 장기수익이기 때문에 아직 관측되지 않았음  
 ![](<../.gitbook/assets/longtermroi_problem2.png>)    
 
-과거 데이터셋을 통해 단기 매출로 장기 매출을 예측하는 ML 모델 만들고, 이 모델로 현재 가진 데이터셋으로 장기 매출을 예측하게 함
+과거 데이터셋을 통해 단기 매출로 장기 매출을 예측하는 ML 모델 만들고, 이 모델로 현재 가진 데이터셋으로 장기 매출을 예측하게 함   
 ![](<../.gitbook/assets/longtermroi_problem2_sol.png>)    
 
 ### 문제상황3
