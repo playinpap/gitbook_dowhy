@@ -27,7 +27,7 @@
 
 1. **변수누락** 
 
-$log(임금) = \beta_0+\beta_1학력+\beta_2경력+u$ 
+$$log(임금) = \beta_0+\beta_1학력+\beta_2경력+u$$ 
 
 if omitted variable = 능력
 
