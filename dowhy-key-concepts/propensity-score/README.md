@@ -4,6 +4,10 @@ description: PSM, Stratification, Weighting
 
 # 성향점수 (Propensity Score)
 
+- 작성자: 김가연
+
+---
+
 인과관계의 성립을 위해서는 다음과 같은 3가지 조건이 필요합니다.
 
 1. 원인변수의 시간적 선행
