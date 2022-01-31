@@ -57,4 +57,4 @@ atc /= numcontrolunits
 
 다만 Nearest Neighbor Matching 은 가장 근접한 성향점수를 가져도 실제로 큰 차이를 가질 수 있다는 한계가 있습니다. 이 때에는 처치집단과 비교집단의 성향점수 차이를 일정 범위로 유지하는 threshold 를 설정한 매칭 방법을 사용합니다. 해당 범위 안에서 대응 짝을 찾을 수 있도록 강제함으로써, 좀 더 엄격하게 실험설계와 유사한 상황을 만들어 낼 수 있습니다.
 
-DoWhy 라이브러리 또한 주어진 radius 값보다 큰 neighbors 는 제외할 수 있도록 [관련 코드](https://microsoft.github.io/dowhy/_modules/dowhy/causal_estimators/propensity_score_matching_estimator.html#:~:text=%23%20TODO%20remove%20neighbors%20that%20are%20more%20than%20a%20given%20radius%20apart)를 추가할 계획인 것으로 보입니다. (2022.01.31 기준)
+DoWhy 라이브러리 또한 주어진 radius 값보다 멀리 있는 neighbors 는 제외할 수 있도록 [관련 코드](https://microsoft.github.io/dowhy/_modules/dowhy/causal_estimators/propensity_score_matching_estimator.html#:~:text=%23%20TODO%20remove%20neighbors%20that%20are%20more%20than%20a%20given%20radius%20apart)를 추가할 계획인 것으로 보입니다. (2022.01.31 기준)
