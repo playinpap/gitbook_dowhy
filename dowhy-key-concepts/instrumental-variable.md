@@ -1,5 +1,7 @@
 # 도구변수 (Instrumental Variable)
 
+- 작성자 : 경윤영
+---
 
 ## 도구변수란?
 
