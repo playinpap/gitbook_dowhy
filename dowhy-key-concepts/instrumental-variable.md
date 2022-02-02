@@ -1,4 +1,5 @@
-# 도구변수
+# 도구변수 (Instrumental Variable)
+
 
 ## 도구변수란?
 
