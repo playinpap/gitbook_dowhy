@@ -4,7 +4,7 @@
 
 ## DoWhy에서 Estimate Effect란?
 
-![](./gitbook/assets/dowhy-diagram.png)
+![](<../.gitbook/assets/dowhy-diagram.png>)  
 
 DoWhy는 인과추론을 위한 메커니즘을 4단계로 구성했습니다. 1단계 (Model)에서는 데이터를 인과 그래프로 인코딩하고, 2단계 (Identify)에서는 모델의 인과 관계를 식별하고 원인을 추정합니다. 3단계 (Estimate)에서는 식별된 인과관계에 대해 추정치를 구하고 4단계 (Refute)에서는 얻어진  추정치에 대해 반박을 시도합니다.
 
@@ -80,11 +80,11 @@ Estimand type: nonparametric-ate
         
         - **Ignorability Assumption** : 가능한 모든 교란 변수를 통제했을 때 잠재적 결과가 처치에 독립일 것이다. 즉, 모든 교란 변수가 통제되었을 것이다. ([이은지님 블로그, 2020](https://assaeunji.github.io/bayesian/2020-04-10-causal/#strong-ignorability-assumption))
             
-            ![](./gitbook/assets/interpret-img1.png)
+            ![](<../.gitbook/assets/interpret-img1.png>)
             
         - **Parametric Assumption** : 강한 Ignorability Assumption 아래에서 ATE, ATT와 같은 대표적인 인과적 Estimand를 추정하는 것은, E[Y (1) | X ] 와 E[Y(0) | X] 를 추정하는 것을 필요로 합니다. 이 때, 두 E[Y (1) | X ] 와 E[Y(0) | X] 가 Linear Regression 으로 피팅될 것을 가정으로 합니다. 이는 X 자체가 고차원이거나, Common Support Assumption 을 만족시키지 못할 수 있기 때문에 현실에서 이 가정이 만족되기 어렵습니다. ([J Hill of NYU, 2015](https://cepim.northwestern.edu/calendar-events/2015-09-29))
             
-            ![](./gitbook/assets/interpret-img1.png)
+            ![](<../.gitbook/assets/interpret-img2.png>)
             
             > Causal inference is important but hard because it requires strong assumptions (ignorability, parametric assumptions).
             
@@ -95,12 +95,15 @@ Estimand type: nonparametric-ate
             > 
             - **Common Support Assumption ( = Positivity / Overlap Assumption)**: 처치가 주어지거나, 주어지지 않을 확률이 0 초과 1 미만일 것. 성향점수매칭이 유효할 수 있는 2가지 조건 중 하나입니다. (나머지 하나는 조건부 독립) 만족시키지 못할 경우, 매칭 기법에서 해결될 수 없는 불균형 / inverse-probability-of-treatment weighting (IPTW) 기법에서 불안정한 가중치를 야기합니다. [(J Hill, 2013](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-7/issue-3/Assessing-lack-of-common-support-in-causal-inference-using-Bayesian/10.1214/13-AOAS630.pdf))
                 
-                ![[F Baum, 2013](http://fmwww.bc.edu/EC-C/S2013/823/EC823.S2013.nn12.slides.pdf)](./gitbook/assets/interpret-img3.png)
+                ![[F Baum, 2013](http://fmwww.bc.edu/EC-C/S2013/823/EC823.S2013.nn12.slides.pdf)](<../.gitbook/assets/interpret-img3.png>)
                 
                 ([F Baum, 2013](http://fmwww.bc.edu/EC-C/S2013/823/EC823.S2013.nn12.slides.pdf)) 
+               
                 
 
 3단계의 출력값 중 **Estimand type**을 이해하기 위해서는 2단계의 인과 관계 식별 방법에 대해서 조금 더 알아보는 것이 좋은데요. 1단계 (Model)에서 입력된 인과 그래프를 기반으로 가능한 모든 식별 방법을 2단계 (Identify)에서 찾게 됩니다. 이 때, 2단계에서 찾는 가능한 모든 **식별 방법**은 총 3가지로 크게 분류가 됩니다 : `Back-door / Front-door / Instrumental-Variables` 
+
+
 
 - 2단계 (Identify) 출력 예시
     
@@ -213,7 +216,7 @@ Target units: ate
     
     위 첫번째 예시의 경우 v0, w3, ~ w1 의 변수를 통해서 y를 예측했다는 것으로 보입니다. 세번째 예시는 도구변수를 활용했을 경우의 출력인데, Wald Estimator 란 아래와 같이 정의됩니다.
     
-    ![](./gitbook/assets/interpret-img4.png)
+    ![](<../.gitbook/assets/interpret-img4.png>)
     
 - **Target Units** : ate, att, atc 중 어떤 단위로 분석된 결과인지 출력. Lambda 함수를 통해서 직접 정의할 수도 있습니다.
     - ate : 평균 처치 효과 (`Average Treatment Effect`)
@@ -272,7 +275,7 @@ p-value: [1.58915682e-156]
     
     다만 정성적으로 고려할 수 없는 / 측정할 수 없는 외부 요인도 존재하여 Unobserved Confounders 라는 이름으로 반영이 되었습니다.
     
-    ![Causal Graph](./gitbook/assets/interpret-5.png)
+    ![Causal Graph](<../.gitbook/assets/interpret-img5.png>)
     
     
 - **결과** 요약 :
