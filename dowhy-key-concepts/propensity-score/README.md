@@ -31,3 +31,16 @@ X 라는 공변량이 주어졌을 때 특정 개체가 통제집단이 아닌 �
 즉, RCT 와 매우 비슷하게 만드는 통계적 접근 방법이라고 할 수 있겠습니다.
 
 성향점수는 로지스틱 회귀모형, 프로빗 모형 등을 통해 추정될 수 있으며 이를 대응(Matching), 층화(Stratification), 가중(Weighting) 등의 방법을 통해 인과효과 추정에 활용합니다. 다음 장부터는 각 방법들에 대해 알아보겠습니다.
+
+---
+
+성향점수(Propensity Score) 챕터를 작성하며 참고한 자료는 아래와 같습니다.
+
+[1] [R 기반 성향점수분석 : 루빈 인과모형 기반 인과추론](https://tidyverse-korea.github.io/seoul-R/data/RMeetup_PSA_slide_210414.pdf)
+
+[2] [경향점수를 활용한 인과효과 추정 방법 비교 : 대응, 가중, 층화, 이중경향점수 보정
+The Journal of Curriculum and Evaluation 2019, Vol. 22, No. 2, pp. 269～291](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE09249298)
+
+[3] [KDD Tutorial 2018](https://causalinference.gitlab.io/kdd-tutorial/methods.html)
+
+[4] [Microsoft DoWhy Package](https://microsoft.github.io/dowhy/_modules/index.html)
