@@ -2,11 +2,13 @@
 description: Targeting Optimization Bidder at Uber
 ---
 
-# Uplift Modeling을 활용한 광고 입찰 최적화 - Uber
+- 작성자 : [최보경](https://www.facebook.com/pagebokyung/)
+- 원문 : [KDD2021 자료](https://drive.google.com/file/d/1QJJUCo4LH5kGQP3kaJlG1RdhjhaJWp-5/view)와 [Colab 노트북](https://colab.research.google.com/drive/1fnZEHIAcNxrvSxFrlO1hRTHO7sazXbo0?usp=sharing)
+
+---
 
 Online Real Time Bidding에서 Uplift Modeling을 활용하여, HTE를 추정한 후 최적의 유저를 선택하는 방법론을 소개합니다.실시간 입찰에서 Uplift Modeling의 효과를 조사하기 위해 실제 캠페인 데이터에 대한 4개의 Meta-Learner 비교 분석을 실시했습니다. Offline Evaluation 및 Online Evaluation를 실시하고, 평가를 위한 근거 자료로 TML(Target Maximum likely Estimation) 기반 평균 처치 효과(ATE)를 사용하는 방법을 소개합니다.
 
-[KDD2021 자료](https://drive.google.com/file/d/1QJJUCo4LH5kGQP3kaJlG1RdhjhaJWp-5/view)와 [Colab 노트북](https://colab.research.google.com/drive/1fnZEHIAcNxrvSxFrlO1hRTHO7sazXbo0?usp=sharing)을 활용해서 스터디를 진행했습니다.
 
 # Background
 
