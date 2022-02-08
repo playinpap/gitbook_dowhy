@@ -1,10 +1,10 @@
 ---
-description: Microsoft의 인과추론을 위한 라이브러리 DoWhy의 가이드를 스터디하여 한국어 자료로 생성한 깃북입니다.
+description: Microsoft의 인과추론을 위한 라이브러리 DoWhy의 가이드를 스터디하며 한국어 자료로 생성한 깃북입니다.
 ---
 
 # DoWhy | 인과추론을 위한 라이브러리
 
-원문: [https://microsoft.github.io/dowhy/](https://microsoft.github.io/dowhy/)
+* 원문: [https://microsoft.github.io/dowhy/](https://microsoft.github.io/dowhy/)
 
 ![](.gitbook/assets/dowhy-diagram.png)
 
