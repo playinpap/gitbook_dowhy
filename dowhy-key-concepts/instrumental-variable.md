@@ -69,8 +69,9 @@ if omitted variable = 능력
 
 $$y = \beta_0+\beta_1x_1+\beta_2x_2 +u$$
 
-<img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_1,&space;x_2" title="x_1, x_2" />가 외생적이면
-<img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_0,&space;\&space;\beta_1,\&space;\beta_2" title="\beta_0, \ \beta_1,\ \beta_2" />는 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;E(u)=0,&space;\&space;E(x_1u)=0,&space;\&space;E(x_2u)&space;=0" title="E(u)=0, \ E(x_1u)=0, \ E(x_2u) =0" /> 에 대응하는  관계에 의해 정의가 가능하다. 
+$$x\_1, x\_2$$ 가 외생적이면 $$\ \beta\_0,\ \beta\_1,\ \beta\_2$$는 $$E(u)=0, \ E(x\_1u)=0, \ E(x\_2u) =0$$ 에
+
+대응하는 관계에 의해 정의가 가능하다.
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
