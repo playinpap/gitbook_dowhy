@@ -61,7 +61,7 @@ if omitted variable = 능력
 
 소비=$$\beta_0+\beta_1$$실제소득 + $$(-\beta_1$$일시소득)
 
-일시소득은 관측이 불가능하여 (<img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;&space;-\beta_1" title=" -\beta_1" />일시소득)이 오차항이 됨, 이때 일시소득은 실제소득의 구성항목으로 오차항인 일시소득과 설명변수인 실제소득이 관련되어 내생성을 가지게 됨 
+일시소득은 관측이 불가능하여 $$(-\beta_1일시소득)$$이 오차항이 됨, 이때 일시소득은 실제소득의 구성항목으로 오차항인 일시소득과 설명변수인 실제소득이 관련되어 내생성을 가지게 됨 
 
 ## 도구변수 수식으로 정리
 
@@ -69,7 +69,7 @@ if omitted variable = 능력
 
 $$y = \beta_0+\beta_1x_1+\beta_2x_2 +u$$
 
-$$x\_1$$, $$x\_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x\_2u) =0$$ 에
+$$x_1$$, $$x_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x_2u) =0$$ 에
 
 대응하는 관계에 의해 정의가 가능하다.
 
@@ -79,7 +79,7 @@ $$E(x_1u)=0\leftrightarrow E[x_1(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
 $$E(x_2u)=0\leftrightarrow E[x_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
-위의 직교방정식은 3개이고 결정해야할 모수<img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_0,&space;\&space;\beta_1,&space;\&space;\beta_2" title="\beta_0, \ \beta_1, \ \beta_2" />가 3개이므로  특이한 상황이 아닌 이상 세 모수들은 관측변수들의 분포(평균, 분산, 공분산 등)에 의해 식별된다(identified). 
+위의 직교방정식은 3개이고 결정해야할 모수 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$가 3개이므로  특이한 상황이 아닌 이상 세 모수들은 관측변수들의 분포(평균, 분산, 공분산 등)에 의해 식별된다(identified). 
 
 아래와 같이 우리는 적률법(method of moments)를 사용하여 OLS 추정량을 구한다. 
 
