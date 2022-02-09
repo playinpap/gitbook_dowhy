@@ -69,9 +69,7 @@ if omitted variable = 능력
 
 $$y = \beta_0+\beta_1x_1+\beta_2x_2 +u$$
 
-$$x_1$$와 $$x_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x_2u) =0$$ 에
-
-대응하는 관계에 의해 정의가 가능하다.
+$$x_1$$와 $$x_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x_2u) =0$$ 에 대응하는 관계에 의해 정의가 가능하다.
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
@@ -103,9 +101,7 @@ $$E(x_2u)=0\leftrightarrow E[x_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] \neq 0$$ 
 
 추가 정보가 없다면 위의 식을 만족시키는 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$ 는 무수히 많게 된다.
 
-그렇기에 세 모수들을 식별하려면 별도의 식이 요구되고 이를 위해 추가적인 외생변수
-
-도구변수 $$(z_2)$$ 를 사용한다.
+그렇기에 세 모수들을 식별하려면 별도의 식이 요구되고 이를 위해 추가적인 외생변수인 도구변수 $$(z_2)$$ 를 사용한다.
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
@@ -136,9 +132,9 @@ $$E(x_1u)=0\leftrightarrow E[x_1(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
 반대로 제약조건의 개수가 모수의 개수보다 작으면 모수들은 under-identified 된다. 
 
-단순한 모형 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;y=\beta_2x_2&plus;u" title="y=\beta_2x_2+u" />일때 설명변수 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_2" title="x_2" />가 내생적이며 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;z_2" title="z_2" />가 도구변수라고 가정하자. 
+단순한 모형 $$y = \beta_2x_2+u$$ 일때 설명변수 $$x_2$$가 내생적이며 $$z_2$$가 도구변수라고 가정하자. 
 
-이 때 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;E(z_2u)=0" title="E(z_2u)=0" /> 이면 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_2" title="\beta_2" />와 관계없이 항상 0이 성립하게 되어 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_2" title="\beta_2" />를 식별할 수 없게 된다. 
+이 때 $$E(z_2u)=0$$ 이면 $$\beta_2$$와 관계없이 항상 0이 성립하게 되어 $$\beta_2$$를 식별할 수 없게 된다. 
 
 $$E(z_2u)=0\leftrightarrow E[z_{2}(y- \beta_2x_2 )] = 0$$
 
@@ -150,7 +146,7 @@ $$E(z_2y) = \beta_2E(z_2x_2) = 0$$
 
 $$y = \beta_0 + \beta_1x_1+\beta_2x_2 +u$$  
 
-여기에서 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_1" title="x_1" />은 외생적이고 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_2" title="x_2" />는 내생적일 때, 추가 도구 변수는 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;z_{2a}" title="z_{2a}" />이다. 
+여기에서 $$x_1$$은 외생적이고 $$x_2$$는 내생적일 때, 추가 도구 변수는 $$z_{2a}$$ 이다. 
 
 1단계)  <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\hat{x_2}&space;=&space;\hat{x_0}&space;&plus;&space;\hat{x_1}z_{2a}" title="\hat{x_2} = \hat{x_0} + \hat{x_1}z_{2a}" />
 
