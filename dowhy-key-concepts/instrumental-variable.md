@@ -69,7 +69,7 @@ if omitted variable = 능력
 
 $$y = \beta_0+\beta_1x_1+\beta_2x_2 +u$$
 
-$$\x_1$$, $$\x_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x_2u) =0$$ 에
+$$x_1$$와 $$x_2$$ 가 외생적이면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$는 $$E(u)=0$$, $$E(x_1u)=0$$, $$E(x_2u) =0$$ 에
 
 대응하는 관계에 의해 정의가 가능하다.
 
@@ -98,20 +98,20 @@ $$E(x_2y)$$를 $$ n^{-1}\sum_{i=1}^{n}x_{i2}y_i$$ 추정하는 등의 방식을 
 
 하지만, $$x_2$$가 내생적이라면 $$E(x_2, u) \neq 0$$ 이고
 
-$$E(x_2u)=0\leftrightarrow E[x\_2(y-\beta\_0 -\beta\_1x\_1 - \beta\_2x\_2 )] \neq 0$$ 이게 된다.
+$$E(x_2u)=0\leftrightarrow E[x_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] \neq 0$$ 이게 된다.
 
 
 추가 정보가 없다면 위의 식을 만족시키는 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$ 는 무수히 많게 된다.
 
 그렇기에 세 모수들을 식별하려면 별도의 식이 요구되고 이를 위해 추가적인 외생변수
 
-도구변수$$(z_2)$$를 사용한다.
+도구변수 $$(z_2)$$ 를 사용한다.
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
 $$E(x_1u)=0\leftrightarrow E[x_1(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
-즉, 기존의 2개의 식과 아래의 식이 추가되어 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$를 식별할 수 있게 된다(just identified). 
+즉, 기존의 2개의 식과 아래의 식이 추가되어 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$ 를 식별할 수 있게 된다(just identified). 
 
 $$E(z_2u)=0\leftrightarrow E[z_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
