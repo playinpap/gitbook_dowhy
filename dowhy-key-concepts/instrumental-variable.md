@@ -17,7 +17,7 @@ description: Instrumental Variable
 ## 도구변수를 사용할 때는?
 
 설명변수가 내생성을 가질때 
-$$E(U|X)\mathrlap{,/}{=}\ 0$$ 일 때 사용할 수 있다. 
+$$E(U|X)\neq 0$$ 일 때 사용할 수 있다. 
 
 즉, 내생성이란 설명변수와 오차가 서로 correlated 일때를 말하고, 
 
