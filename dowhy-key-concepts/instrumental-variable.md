@@ -155,4 +155,4 @@ $y = \beta\_0 + \beta\_1x\_1+\beta\_2x\_2 +u$
 
 2단계에서는 y를 $x\_1과 \ \hat{x\_2}에$ 대해 OLS 회귀를 시킨다.
 
-<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"></script>
+</body> <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} });</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"></script>
