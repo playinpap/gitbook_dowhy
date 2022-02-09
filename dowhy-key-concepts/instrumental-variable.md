@@ -92,26 +92,26 @@ $$E(x_1y)=\beta_0E(x_1)+\beta_1E(x_1^2)+\beta_2E(x_1x_2)$$
 $$E(x_2y)=\beta_0E(x_2)+\beta_1E(x_1x_2)+\beta_2E(x_2^2)$$
 
 
-즉, $$E(y)$$를 $$n^{-1}\sum\_{i=1}^{n}y\_i$$ 로 추정하고 $$E(x_1y)$$를 $$n^{-1}\sum\_{i=1}^{n}x\_{i1}y\_i$$ 로 추정,
+즉, $$E(y)$$를 $$n^{-1}\sum_{i=1}^{n}y_i$$ 로 추정하고 $$E(x_1y)$$를 $$ n^{-1}\sum_{i=1}^{n}x_{i1}y_i$$ 로 추정,
 
-$$E(x_2y)$$를 $$n^{-1}\sum\_{i=1}^{n}x\_{i2}y\_i$$ 추정하는 등의 방식을 사용하여 모집단 상수를 구한 후 위의 등식에 대입한다면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$가 결정된다. (단, 비특이성을 만족시킨다: 3원 1차 연립방정식의 해가 유일할 조건이 있다.)
+$$E(x_2y)$$를 $$ n^{-1}\sum_{i=1}^{n}x_{i2}y_i$$ 추정하는 등의 방식을 사용하여 모집단 상수를 구한 후 위의 등식에 대입한다면 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$가 결정된다. (단, 비특이성을 만족시킨다: 3원 1차 연립방정식의 해가 유일할 조건이 있다.)
 
 하지만, $$x_2$$가 내생적이라면 $$E(x_2, u) \neq 0$$ 이고
 
-$$E(x_2u)=0\leftrightarrow E\[x\_2(y-\beta\_0 -\beta\_1x\_1 - \beta\_2x\_2 )] \neq 0$$ 이게 된다.
+$$E(x_2u)=0\leftrightarrow E[x\_2(y-\beta\_0 -\beta\_1x\_1 - \beta\_2x\_2 )] \neq 0$$ 이게 된다.
 
 
-추가 정보가 없다면 위의 식을 만족시키는 $\ \beta\_0,\ \beta\_1,\ \beta\_2$ 는 무수히 많게 된다.
+추가 정보가 없다면 위의 식을 만족시키는 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$ 는 무수히 많게 된다.
 
 그렇기에 세 모수들을 식별하려면 별도의 식이 요구되고 이를 위해 추가적인 외생변수
 
-도구변수$(z\_2)$를 사용한다.
+도구변수$$(z_2)$$를 사용한다.
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
 $$E(x_1u)=0\leftrightarrow E[x_1(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
-즉, 기존의 2개의 식과 아래의 식이 추가되어   <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_0,&space;\&space;\beta_1,&space;\&space;\beta_2" title="\beta_0, \ \beta_1, \ \beta_2" />를 식별할 수 있게 된다(just identified). 
+즉, 기존의 2개의 식과 아래의 식이 추가되어 $$\beta_0$$, $$\beta_1$$, $$\beta_2$$를 식별할 수 있게 된다(just identified). 
 
 $$E(z_2u)=0\leftrightarrow E[z_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
@@ -121,12 +121,12 @@ $$E(z_2u)=0\leftrightarrow E[z_2(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
 예를 들어 내생적 설명변수 1개인데 도구변수가 2개이상 일때 over-identified라고 한다!
 
-도구변수 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;z_{2a},&space;\&space;z_{2b}" title="z_{2a}, \ z_{2b}" /> 가 있으면 아래의 두 개의 식이 추가된다. 
+도구변수 $$z_{2a}$$, $$z_{2b}$$가 있으면 아래의 두 개의 식이 추가된다. 
 
 $$E[z_{2a}(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 $$E[z_{2b}(y-\beta_0 -\beta_1x_1 - \beta_2x_2 )] = 0$$
 
-그렇다면 세 모수  <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\beta_0,&space;\&space;\beta_1,&space;\&space;\beta_2" title="\beta_0, \ \beta_1, \ \beta_2" />는 기존의 식들과 새롭게 생긴 위의 식들을 만족시켜야한다. 
+그렇다면 세 모수  $$\beta_0$$, $$\beta_1$$, $$\beta_2$$ 는 기존의 식들과 새롭게 생긴 위의 식들을 만족시켜야한다. 
 
 $$E(u)=0\leftrightarrow E(y-\beta_0 -\beta_1x_1 - \beta_2x_2 ) = 0$$
 
