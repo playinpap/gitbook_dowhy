@@ -148,12 +148,12 @@ $$y = \beta_0 + \beta_1x_1+\beta_2x_2 +u$$
 
 여기에서 $$x_1$$은 외생적이고 $$x_2$$는 내생적일 때, 추가 도구 변수는 $$z_{2a}$$ 이다. 
 
-1단계)  <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\hat{x_2}&space;=&space;\hat{x_0}&space;&plus;&space;\hat{x_1}z_{2a}" title="\hat{x_2} = \hat{x_0} + \hat{x_1}z_{2a}" />
+1단계)   $$\hat{x\_2} = \hat{x\_0} + \hat{x\_1}z\_{2a}$$
 
-1단계에서는 내생적 설명변수인 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_2" title="x_2" />를 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_1" title="x_1" />과 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;z_2" title="z_2" />에 대해 회귀하여 맞춘값을 구한다. 
 
-그리고 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;z_2" title="z_2" />의 유의성을 점검하는 것이 좋다. 
+1단계에서는 내생적 설명변수인 $$x_2$$를 $$x_1$$과 $$z_2$$에 대해 회귀하여 맞춘값을 구한다. 
 
-2단계)  <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;y&space;=&space;\beta_0&space;&plus;&space;\beta_1x_1&space;&plus;&space;\beta_2\hat{x_2}&space;&plus;&space;u" title="y = \beta_0 + \beta_1x_1 + \beta_2\hat{x_2} + u" />
+그리고 $$z_2$$의 유의성을 점검하는 것이 좋다. 
 
-2단계에서는 y를 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;x_1" title="x_1" />과 <img src="https://latex.codecogs.com/gif.image?\dpi{110}&space;\hat{x_2}" title="\hat{x_2}" />에 대해 OLS 회귀를 시킨다.
+2단계)  $$y = \beta\_0 + \beta\_1x\_1 + \beta\_2\hat{x\_2} + u$$
+2단계에서는 y를 $$x_1$$과 $$\hat{x_2}$$에 대해 OLS 회귀를 시킨다.
