@@ -194,7 +194,7 @@ p value:0.49
 
 ### 2) Using a Function that Generates the Outcome from the Confounders
 
-아래식과 같이 사용자가 직접 값을 정의해줍니다. 
+아래와 같이 새로운 Y를 생성하기 위해 교란변수를 사용한 선형식을 정의합니다. 
 
 $$y_{new} = \beta_0W_0 + \beta_1W_1 + \gamma_0$$
 
