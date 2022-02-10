@@ -6,11 +6,8 @@ description: >-
 
 # 사용자 정의 결과 함수를 사용해 추정치 반박하기
 
-# 사용자 정의 결과 함수를 사용해 추정치 반박하기
-
-작성자: 경윤영
-
-원문: [Dowhy -Simple Example on Creating a Custom Refutation Using User-Defined Outcome Functions](https://microsoft.github.io/dowhy/example_notebooks/dowhy_demo_dummy_outcome_refuter.html) 
+*작성자: 경윤영
+*원문: [Dowhy -Simple Example on Creating a Custom Refutation Using User-Defined Outcome Functions](https://microsoft.github.io/dowhy/example_notebooks/dowhy_demo_dummy_outcome_refuter.html) 
 
 본 글은 Refute 방법론을 사용하는 코드 레퍼런스를 남기는 목적으로 작성되었습니다. 그렇기에 Refute에 대한 학습이 필요하신 경우 DOWHY KEY CONCEPTS의 [추정치를 검증하는 방법](https://playinpap.gitbook.io/dowhy/dowhy-key-concepts/sensitivity-analysis) 을 참고하시길 바랍니다. 
 
