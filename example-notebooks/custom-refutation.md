@@ -7,6 +7,7 @@ description: >-
 # 사용자 정의 결과 함수를 사용해 추정치 반박하기
 
 *작성자: 경윤영
+
 *원문: [Dowhy -Simple Example on Creating a Custom Refutation Using User-Defined Outcome Functions](https://microsoft.github.io/dowhy/example_notebooks/dowhy_demo_dummy_outcome_refuter.html) 
 
 본 글은 Refute 방법론을 사용하는 코드 레퍼런스를 남기는 목적으로 작성되었습니다. 그렇기에 Refute에 대한 학습이 필요하신 경우 DOWHY KEY CONCEPTS의 [추정치를 검증하는 방법](https://playinpap.gitbook.io/dowhy/dowhy-key-concepts/sensitivity-analysis) 을 참고하시길 바랍니다. 
@@ -99,7 +100,7 @@ V0: 처치변수(treatment)
 
 Y: 결과변수(outcome)Y
 
-![Untitled](%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%8C%E1%85%A1%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%B4%20%E1%84%80%E1%85%A7%E1%86%AF%E1%84%80%E1%85%AA%20%E1%84%92%E1%85%A1%E1%86%B7%E1%84%89%E1%85%AE%E1%84%85%E1%85%B3%E1%86%AF%20%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A2%20%E1%84%8E%E1%85%AE%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8E%E1%85%B5%20%E1%84%87%E1%85%A1%E1%86%AB%E1%84%87%E1%85%A1%2036f1ecb256a248dc8d661c483b88bcca/Untitled.png)
+![사용자 정의 함수 이미지1](https://user-images.githubusercontent.com/39981604/153433647-39b2fd58-d7f1-485c-9f5e-39e1aa8e8899.png)
 
 ## 4. Identify the Estimand
 
