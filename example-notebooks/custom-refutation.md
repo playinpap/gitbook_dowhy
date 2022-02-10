@@ -194,7 +194,7 @@ p value:0.49
 
 ### 2) Using a Function that Generates the Outcome from the Confounders
 
-The basic expression is of the form 
+아래식과 같이 사용자가 직접 값을 정의해줍니다. 
 
 $$y_{new} = \beta_0W_0 + \beta_1W_1 + \gamma_0$$
 
