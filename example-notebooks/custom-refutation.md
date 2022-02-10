@@ -100,7 +100,7 @@ V0: 처치변수(treatment)
 
 Y: 결과변수(outcome)
 
-![사용자 정의 함수 이미지1](https://user-images.githubusercontent.com/39981604/153433647-39b2fd58-d7f1-485c-9f5e-39e1aa8e8899.png)
+!(https://user-images.githubusercontent.com/39981604/153433647-39b2fd58-d7f1-485c-9f5e-39e1aa8e8899.png)
 
 ## 4. Identify the Estimand
 
