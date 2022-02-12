@@ -9,17 +9,17 @@ description: Estimating the effect of a Member Rewards program
 
 DoWhy 를 사용하여 고객에 대한 **구독 또는 리워드 프로그램의 효과**를 추정하는 방법을 알아보겠습니다.
 
-웹사이트에 고객이 가입하면 추가 혜택을 받는 멤버쉽 리워드 프로그램이 있다고 가정해봅시다. 해당 프로그램이 효과적인지 어떻게 알 수 있을까요? 여기서 우리는 **인과적인 질문**을 할 수 있습니다. 
+고객이 웹사이트에 가입하면 추가 혜택을 받는 멤버십 리워드 프로그램이 있다고 가정해봅시다. 해당 프로그램이 효과적인지 어떻게 알 수 있을까요? 여기서 우리는 **인과적인 질문**을 할 수 있습니다. 
 
-> 멤버쉽 리워드 프로그램 제공이 총 매출에 미치는 영향은 무엇인가?
+> 멤버십 리워드 프로그램 제공이 총 매출에 미치는 영향은 무엇인가?
 > 
 
 그리고 이와 동등한 반사실적(counterfactual) 질문은 다음과 같습니다.
 
-> 만약 고객들이 멤버쉽 리워드 프로그램에 가입하지 않았다면, 그들은 웹사이트에 얼마나 더 적은 돈을 썼을 것인가?
+> 만약 고객들이 멤버십 리워드 프로그램에 가입하지 않았다면, 그들은 웹사이트에 얼마나 더 적은 돈을 썼을 것인가?
 > 
 
-다시 말하면, 우리는 처치집단에 대한 평균 처치 효과(the Average Treatment Effect On the Treated, ATT)에 관심이 있습니다.
+다시 말하면, 우리는 처치집단에 대한 평균 처치 효과(the Average Treatment Effect On the Treated, ATT)를 구하고자 합니다.
 
 ## I. Formulating the causal model
 
@@ -141,7 +141,7 @@ display(Image(filename="causal_model.png"))
 
 ## **II. Identifying the causal effect**
 
-관측되지 않은 교란 변수가 큰 역할을 하지 않는다고 가정해봅시다.
+만약 관측되지 않은 교란 변수가 큰 역할을 하지 않는다고 가정해봅시다.
 
 ```python
 identified_estimand = model.identify_effect(proceed_when_unidentifiable=True)
