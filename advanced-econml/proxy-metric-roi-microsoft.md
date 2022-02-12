@@ -97,3 +97,99 @@ for t in range(1, n_periods):  # for each target period 1...m
 ### 최종형태
 일련의 과정들을 파이프라인화 하면 ROI 측정을 할 수 있음  
 ![](<../.gitbook/assets/unified_pipeline.png>)    
+
+
+# (추가) Double Machine Learning이란?
+
+* 작성자: 
+
+본글은 DML이 무엇인지 아주 가볍게 이론을 소개합니다. 
+자세한 정보를 알고 싶으시다면 [Double Machine Learning for causal inference](https://towardsdatascience.com/double-machine-learning-for-causal-inference-78e0c6111f9d)를 찾아가시면 됩니다! 
+
+## 1. 소개
+
+### Double Machine Learning(DML)이란
+
+1. 머신러닝을 사용하여 인과효과를 추정하는 프레임워크이다. 
+2. 신뢰구간 추정을 사용한다. 
+3. “root n-consistency” 추정량에 따라 convergence와 data-efficiency를 갖고 있다. 
+
+### 그렇다면 DML의 개념은 어디서 나왔을까?
+
+1. 머신러닝을 통계적인 관점에서는 비모수적(nonparametric) 혹은 반모수적(semiparametric) 모형의 모음이라고 볼 수 있다. 
+2. 또한 비모수적 및 반모수적 추정방법(한계, 효율성 등)에 대한 이론이 많이 들어가 있다. 
+
+### DML을 왜 사용할까?
+
+1. 머신러닝은 modeling functions과 expectations에 대해 힘이 있다. 
+2. 머신러닝은 전통적인 통계 기법(예시: OLS)보다 예측에 사용하기 좋다. 
+특히 데이터가 고차원일 때! 
+3. 전통적인 통계 방법과 비교할 때  머신러닝은 $$m_0(Z), g_0(Z)$$에 대해서 강한 가정이 없어도 된다. 
+4. 직교화(Orthogonality)를 통해서 정규화 편향을, cross-fitting을 통해서 과대적합 편향을 수정하는 것을 목표로 한다. 
+
+## 2. 세팅
+
+### 1. DAG
+
+![](https://user-images.githubusercontent.com/39981604/153712545-26522887-a67a-4877-834b-0b5479535dd1.png)
+
+$$Y = D\theta_0 + g_0(Z) + U, E[U|Z, D] = 0$$    식(1)
+
+$$D=m_0(Z)+V, E[V|Z]=0$$   식(2) 
+
+Y:  결과변수 
+
+D: 처리변수(이항변수) 
+
+$$\theta_0$$: 추정하고자 하는 파라미터
+
+Z: 공변량 벡터
+
+U, V:  교란변수 
+
+$$\eta_0=(g_0, m_0)$$ : 장애모수(nuisance parameter)  
+
+식(1)은 $$\theta_0$$ 를 추정하기 위해 만든식이고, 식(2)는 교란변수를 추적하기 위함이다. 
+
+## 3. Naive estimator
+
+그렇다면 머신런닝만을 사용하여 직접적으로 $\theta_0$을 추정하지 않는걸까? 
+추정에서 편향성이 나타나기 때문이다. 
+
+![](https://user-images.githubusercontent.com/39981604/153712577-f12b3983-bb38-46c8-adfe-de2575ba6ad6.png)
+
+### 4. Neyman Orthogonality
+
+위의 편향을 없애기 위해 우리는 neyman orthogonality를 사용한다. 직교성은 Frisch-Waugh-Lovell 정리가 기반이 된다. (Frisch-Waugh-Lovell에 대한 자세한 설명은 [여기](https://datascienceschool.net/03%20machine%20learning/04.05%20%EB%B6%80%EB%B6%84%ED%9A%8C%EA%B7%80.html)로)
+
+예를 들어 $$Y = \beta_0 + \beta_1D + \beta_2Z + U$$  에서 $$\beta_1$$를 추정하기 위해 두 가지 방법을 쓴다.  
+
+1. OLS를 사용하여 D 및 Z에 대한 Y의 선형회귀 
+2. ① Z에서 D를 회귀 ②Z에서 Y를 회귀, ③ $$\beta_1$$를 얻기 위해 ①의 잔차에 대해 ②의 잔차를 회귀한다.   
+
+편향을 없애기 위해  3단계에 걸쳐서 머신러닝을 진행한다. 
+
+1. 머신러닝을 사용하여 Z를 기반으로 D를 예측한다. 
+2. 머신러닝을 사용하여 Z를 기반으로 Y를 예측한다. 
+3. $$\theta_0$$를 얻기 위해 ①의 잔차에 대해 ②의 잔차를 회귀한다.   
+
+3단계를 걸친 머신러닝은 “직교화”되어 편향되지 않는 “root n-consistency” 를 산출한다. 
+
+![](https://user-images.githubusercontent.com/39981604/153712587-a521419b-7d5f-4bf7-b0e4-9c0ae4e5318b.png)
+
+### 5. Sample-splitting and Cross-fitting
+
+과적합의 편향을 제거하기 위해서 sample splitting의 방법 중 하나인 cross-fitting을 진행한다. 
+
+1. 데이터를 무작위 추출하여 두 개의 하위 집합으로 분할을 진행한다. 
+2. 첫 번째 하위 집합에서 D와 Y에 대한 머신러닝 모델을 맞춘다(fit). 
+3. 2단계에서 얻은 모델을 사용하여 두번째 부분 집합에서 $$\theta_{0,1}$$을 추정한다.
+4. 두 번째 하위집합에 머신러닝 모델을 맞춘다(fit). 
+5. 4단계에서 얻은 모델을 사용하여 두번째 부분 집합에서 $$\theta_{0,2}$$을 추정한다.
+6. 최종적으로 추정량 $$\theta_0$$은 $$\theta_{0,1}$$와 $$\theta_{0,2}$$의 평균한 값으로 한다. 
+
+cf) sample splitting 방법  
+
+1. 데이터를 무작위 추출하여 두 개의 하위 집합으로 분할을 진행한다. 
+2. 첫 번째 하위 집합에서 D와 Y에 대한 머신러닝 모델을 맞춘다(fit). 
+3. 2단계에서 얻은 모델을 사용하여 두번째 부분 집합에서 $$\theta_0$$을 추정한다.
