@@ -99,6 +99,7 @@ for t in range(1, n_periods):  # for each target period 1...m
 ![](<../.gitbook/assets/unified_pipeline.png>)    
 
 
+
 # (추가) Double Machine Learning이란?
 
 * 작성자: 
