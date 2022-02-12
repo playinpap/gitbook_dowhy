@@ -1,13 +1,11 @@
 ---
-description: 멤버쉽 리워드 프로그램은 총 매출에 어떤 영향을 미칠까?
+description: Estimating the effect of a Member Rewards program
 ---
 
 # 멤버십 리워드 프로그램의 효과 추정하기
 
-- 작성자: [김가연](https://www.facebook.com/profile.php?id=1721702213)
-- [원문](https://microsoft.github.io/dowhy/example_notebooks/dowhy_example_effect_of_memberrewards_program.html)
-
----
+* 작성자: [김가연](https://www.facebook.com/profile.php?id=1721702213)
+* [원문](https://microsoft.github.io/dowhy/example_notebooks/dowhy_example_effect_of_memberrewards_program.html)
 
 DoWhy 를 사용하여 고객에 대한 **구독 또는 리워드 프로그램의 효과**를 추정하는 방법을 알아보겠습니다.
 
@@ -23,7 +21,7 @@ DoWhy 를 사용하여 고객에 대한 **구독 또는 리워드 프로그램�
 
 다시 말하면, 우리는 처치집단에 대한 평균 처치 효과(the Average Treatment Effect On the Treated, ATT)에 관심이 있습니다.
 
-# I. Formulating the causal model
+## I. Formulating the causal model
 
 리워드 프로그램이 2019년 1월에 도입되었다고 가정해봅시다. 결과 변수는 연말 총 지출액입니다. 우리는 모든 유저의 모든 월별 거래 내역과 리워드 프로그램 가입을 선택한 유저들의 가입 시간에 대한 데이터를 가지고 있습니다. 데이터는 다음과 같습니다.
 
@@ -67,7 +65,7 @@ df
 
 120000 rows × 5 columns
 
-## The importance of time
+### The importance of time
 
 이 문제를 모델링하는 데 있어서 **시간이 중요한 역할**을 합니다.
 
@@ -141,7 +139,7 @@ display(Image(filename="causal_model.png"))
 
 더 일반적으로, 고객에 대한 모든 활동 데이터를 위 그래프에 포함시킬 수 있습니다. 모든 사전 및 사후 활동 데이터는 이미 사용된 사전 및 사후 노드들과 동일한 위치 및 엣지를 차지합니다.
 
-# **II. Identifying the causal effect**
+## **II. Identifying the causal effect**
 
 관측되지 않은 교란 변수가 큰 역할을 하지 않는다고 가정해봅시다.
 
@@ -175,7 +173,7 @@ No such variable found!
 
 DoWhy 는 그래프를 바탕으로, 가입 월과 처지 이전 월(`signup_month`, `pre_spend`)에 소요된 금액을 조건화할 필요가 있다고 판단합니다.
 
-# **III. Estimating the effect**
+## **III. Estimating the effect**
 
 이제 backdoor estimand(추정치)를 기반으로 target_units 를 “att”로 설정하여 효과를 추정합니다.
 
@@ -215,7 +213,7 @@ Mean value: 115.21872571872572
 
 따라서 아무리 가입 효과가 모든 달에 걸쳐 동일했더라도, 데이터가 부족한 상황에서는 추정된 pre-treatment 또는 post-treatment 거래 활동의 변동이 클 수 있기 때문에 가입 월별로 추정 효과가 다를 수 있습니다.
 
-# **IV. Refuting the estimate**
+## **IV. Refuting the estimate**
 
 Placebo treatment refuter 를 사용하여 추정치를 반박합니다. 이 refuter 는 treatment 를 독립적인 랜덤 변수로 대체하고 추정치가 0이 되는지 여부를 확인합니다. (0이 되어야 합니다!)
 
