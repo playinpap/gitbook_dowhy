@@ -5,7 +5,7 @@ description: Estimating the effect of a Member Rewards program
 # 멤버십 리워드 프로그램의 효과 추정하기
 
 * 작성자: [김가연](https://www.facebook.com/profile.php?id=1721702213)
-* [원문](https://microsoft.github.io/dowhy/example_notebooks/dowhy_example_effect_of_memberrewards_program.html)
+* 원문: [Estimating the effect of a Member Rewards program](https://microsoft.github.io/dowhy/example_notebooks/dowhy_example_effect_of_memberrewards_program.html)
 
 DoWhy 를 사용하여 고객에 대한 **구독 또는 리워드 프로그램의 효과**를 추정하는 방법을 알아보겠습니다.
 
