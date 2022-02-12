@@ -40,10 +40,31 @@ TripAdvisor 의사결정권자들은 2가지 질문이 있었습니다.
 {% endtab %}
 
 {% tab title="Proposal #3 (선택)" %}
-**Recommendation A/B 테스트를 진행하고 도구변수로 활용하**
+**Recommendation A/B 테스트를 진행하고 도구변수로 활용하는 방식**
 
-다행히도, TripAdvisor는 유저의 리텐션을 향상시키기 위해 일부 랜덤한 유저에게 멤버십에 더 쉽게 가입하는 프로세스를 추가해 실험을 진행한 적이 있었습니다.
+다행히도, TripAdvisor는 유저의 리텐션을 향상시키기 위해 일부 랜덤한 유저에게 멤버십에 더 쉽게 가입하는 프로세스를 추가해 실험을 진행한 적이 있었습니다. 
 
 ![](<../.gitbook/assets/image (5).png>)
 {% endtab %}
 {% endtabs %}
+
+## Methodology
+
+Proposal #3 의 더 쉬운 가입 프로세스(Instrument)는 도구변수의 역할로, 멤버쉽 가입(Treatment)에는 영향을 주지만 User engagement(Outcome)에는 영향을 주지 않습니다.
+
+![Instrumental Variables (IVs)](https://user-images.githubusercontent.com/76609403/153713882-4bf9d6b8-255d-405f-9df4-1bf9e9159c34.png)
+
+일반적으로 도구변수는 활용함에 있어 여러 한계점이 존재합니다. 일반적인 ML 알고리즘처럼 확장하는 것은 어렵고, 약한 도구변수는 효과 추정을 위해 매우 큰 데이터셋이 필요합니다. 또한 complex effect 혹은 compliance heterogeneity 모두에 대해 설명할 수 없어 편향된 결과를 가져올 수 있습니다.
+
+![Challenges and Limitations of Typical IV Methods](https://user-images.githubusercontent.com/76609403/153714542-f73ae01d-170b-4979-abbf-49f2f243a5a0.png)
+
+TripAdvisor 의 Recommendation A/B 테스트를 자세히 알아보겠습니다. 400만 유저 중 랜덤으로 절반이 '더 쉬운 가입 프로세스'를 받게 하여 멤버쉽 가입을 유도합니다.
+
+각 유저마다 아래와 같은 변수를 관측합니다.
+
+- T (treatment) : 유저 멤버쉽 가입 여부
+- Y (outcome) : 실험 이후 14일 동안의 방문 횟수
+- X : heterogeneity 를 잡아낼 유저 관련 변수들
+- Z (instrumental variables) : Recommendation A/B 테스트 할당
+
+![Trip Advisor Experiment](https://user-images.githubusercontent.com/76609403/153714994-b8fc674d-f2ae-46f3-a68e-65c81a42195b.png)
