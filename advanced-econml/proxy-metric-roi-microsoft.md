@@ -102,7 +102,7 @@ for t in range(1, n_periods):  # for each target period 1...m
 
 # (추가) Double Machine Learning이란?
 
-* 작성자: 
+* 작성자: 경윤영
 
 본글은 DML이 무엇인지 아주 가볍게 이론을 소개합니다. 
 자세한 정보를 알고 싶으시다면 [Double Machine Learning for causal inference](https://towardsdatascience.com/double-machine-learning-for-causal-inference-78e0c6111f9d)를 찾아가시면 됩니다! 
