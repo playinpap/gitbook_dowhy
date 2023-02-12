@@ -4,7 +4,14 @@ description: Microsoft의 인과추론을 위한 라이브러리 DoWhy의 가이
 
 # DoWhy | 인과추론을 위한 라이브러리
 
-* 원문: [https://microsoft.github.io/dowhy/](https://microsoft.github.io/dowhy/)
+* 원문 : [https://www.pywhy.org/dowhy/](https://www.pywhy.org/dowhy/)
+* 라이브러리 : [https://github.com/py-why/dowhy](https://github.com/py-why/dowhy)
+*   제작자 :&#x20;
+
+    Amit Sharma, Emre Kiciman. DoWhy: An End-to-End Library for Causal Inference. 2020. [https://arxiv.org/abs/2011.04216](https://arxiv.org/abs/2011.04216)
+
+    \
+
 
 ![](.gitbook/assets/dowhy-diagram.png)
 
